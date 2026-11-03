@@ -5,7 +5,7 @@
 1. Clone repository:
 
 ```shell
-git clone https://github.com/???/PFM4Cell.git
+git clone https://github.com/x0gaagin0x/PFM4Cell.git
 ```
 
 2. Create virtual environment:
