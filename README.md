@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 ## Data preprocessing
 
-The Spatial Pan-cancer Atlas of Cells (SPAC) dataset can be downloaded from [link][https://drive.google.com/file/d/16h-zTr3x_APV351kHP5I5d-G5nSB7-cA/view?usp=sharing]. Links to the other required files are provided in `link.md`.
+The Spatial Pan-cancer Atlas of Cells (SPAC) dataset can be downloaded from [link](https://drive.google.com/file/d/16h-zTr3x_APV351kHP5I5d-G5nSB7-cA/view?usp=sharing). Links to the other required files are provided in `link.md`.
 
 Required files for each Xenium dataset:
 
