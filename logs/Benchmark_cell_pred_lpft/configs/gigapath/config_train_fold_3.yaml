@@ -1,0 +1,61 @@
+random_seed: 2434
+n_gpu: 1
+data:
+    dataset_train_path_list:
+        - SPAC/Xv1HBA_R1
+        - SPAC/Xv1HLiC
+        - SPAC/XPHOA
+        - SPAC/Xv1HLC_2
+        - SPAC/Xv1HPC
+        - SPAC/Xv1HBA_R2
+        - SPAC/Xv1HOC
+        - SPAC/Xv1HLC_3
+        - SPAC/Xv1HCC
+        - SPAC/XPHCC
+        - SPAC/Xv1HKC
+        - SPAC/Xv1HCCA
+        - SPAC/Xv1HBESA_R1
+        - SPAC/XPHBC
+        - SPAC/XP5KHLC
+        - SPAC/Xv1HP
+    dataset_val_path_list:
+        - SPAC/Xv1HBESA_R2
+        - SPAC/XPHPA
+        - SPAC/XPHOC
+        - SPAC/Xv1HPDA
+        - SPAC/Xv1HLC_1
+    graph_dirname: graphs_manual_anno4UNI
+    image_dirname: patches4UNI
+model:
+    cell_enc_type: gigapath
+    output_dim: 9
+    cell_emb_dim: 1536
+    mlp_hidden_dims: [192]
+    norm_type: layer
+    cell_enc_dir: pretrained_model/prov-gigapath
+    mode: MLP
+    graph_type: patch_subgraph
+training:
+    n_epoch: 30
+    batch_size: 32
+    learning_rate: 0.000001
+    weight_decay: 0.0005
+    accumulation_steps: 4
+    patience: 5
+    num_workers: 8
+    loss_type: cross_entropy
+    use_weighted_loss: False
+lp_training:
+    n_epoch: 20
+    batch_size: 32
+    learning_rate: 0.0005
+    weight_decay: 0.0005
+    accumulation_steps: 4
+    patience: 10
+    num_workers: 8
+    loss_type: cross_entropy
+    use_weighted_loss: False
+colorcell_ckpt:
+    save_dir: logs/Benchmark_cell_pred_lpft/results/gigapath/fold_3
+lp_ckpt:
+    save_dir: logs/Benchmark_cell_pred_lpft/results/gigapath/fold_3/lp_ckpt
