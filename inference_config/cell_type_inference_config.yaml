@@ -1,0 +1,15 @@
+model:
+    cell_enc_type: UNI2-h
+    output_dim: 9
+    cell_emb_dim: 1536
+    mlp_hidden_dims: [192]
+    norm_type: layer
+    cell_enc_dir: pretrained_model/UNI2-h
+    mode: MLP
+    graph_type: patch_subgraph
+predict:
+    batch_size: 32
+    num_workers: 8
+colorcell_ckpt:
+    save_dir: logs/Benchmark_cell_pred_lp/results/UNI2-h/fold_3/lp_ckpt
+model_mode: LP
